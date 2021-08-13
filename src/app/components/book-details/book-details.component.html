@@ -1,0 +1,17 @@
+<div class="main-content">
+
+  <div class="container-fluid">
+     <img src="{{book.bookImage}}"  class="detail-img"/>
+     <h3>{{book.bookName}}</h3>
+     <div class="price">
+          {{book.unitPrice | currency:'INR'}}
+     </div>
+     <button (click)="addToCart()" class="btn btn-primary btn-sm">Add to cart</button>
+     <hr/>
+     <h4>Description</h4>
+     <p>{{book.bookDescription}}</p>
+     <br><br><br>
+     <a routerLink="/category/{{book.categoryId}}">Back to Book List</a> 
+  </div>
+  </div>
+   

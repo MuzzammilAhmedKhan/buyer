@@ -1,0 +1,27 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div *ngIf="books?.length == 0">
+               <p class="alert alert-warning col-md-3">No Products found </p>
+            </div>
+            <div class="row">
+                <div *ngFor="let tempBook of books" class="col-md-3">
+                        <div class="product-box">
+                            <a routerLink="/bookdetail/{{tempBook.bookId}}">
+                            <img src="{{tempBook.bookImage}}" class="img-responsive" width="300" 
+                            height="400"/>
+                            </a>
+
+                            <a routerLink="/bookdetail/{{tempBook.bookId}}">
+                            <h1>{{tempBook.bookName}}</h1>
+                            </a>
+                            <div class="price">
+                               {{tempBook.unitPrice | currency:'INR'}}     
+                            </div>
+                            <button (click)="addToCart(tempBook)" class="btn btn-primary btn-small">Add to cart</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

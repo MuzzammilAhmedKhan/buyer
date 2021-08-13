@@ -1,0 +1,24 @@
+<!--category-list is the book_category table in MySQL-->
+<!--category-list is the book_category table in MySQL-->
+<!--category-list is the book_category table in MySQL-->
+<!--category-list is the book_category table in MySQL-->
+<!--category-list is the book_category table in MySQL-->
+<aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+        <a routerLink="#">
+            <img (click)="exploreAll()" routerLink="welcome" src="assets/images/logos.png" alt="shopme" class="img-responsive">
+        </a>
+    </div>
+    <div class="menu-sidebar-content js-scrollbar1">
+        <nav class="navbar-sidebar">
+            
+                <ul class=" list-unstyled navbar-list nav-pills nav-stacked " *ngFor="let tempCategory of categories">
+                    <li class = "active">
+                        <a routerLink="/category/{{tempCategory.categoryId}}">{{tempCategory.categoryName}}</a>  
+                    </li>
+                
+                </ul>
+            
+        </nav>
+    </div>  
+</aside>
